@@ -64,6 +64,8 @@ if __name__ == '__main__':
     ]
     print("Before:", end="")
     print_board(game_board)
-    solve(game_board)
-    print("After:", end="")
-    print_board(game_board)
+    if solve(game_board):
+        print("After:", end="")
+        print_board(game_board)
+    else:
+        print("Not solvable")
